@@ -6,6 +6,30 @@
   <title>Brookes Presentes — Boutique de Presentes Criativos, Mimos & Artigos Religiosos | Méier, RJ</title>
   <meta name="description" content="Encontre o presente perfeito na Brookes Presentes, Galeria Oxford no Méier. Itens licenciados Disney e Geek, linha religiosa nobre, canecas, luminárias e mimos com embalagem inclusa. Nota 5.0 no Google (179 avaliações).">
   
+  <!-- Open Graph / WhatsApp / Facebook / Redes Sociais -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Brookes Presentes">
+  <meta property="og:title" content="Brookes Presentes — Presentes Criativos, Decoração & Mimos no Méier">
+  <meta property="og:description" content="A boutique de presentes mais bem avaliada do Méier (Nota 5.0 com 179 avaliações no Google). Itens Disney, linha sacra, canecas e mimos com embalagem pronta com laço de presente. Galeria Oxford, Loja 128.">
+  <meta property="og:url" content="https://thalesmsousa10.github.io/brookes-presentes/">
+  <meta property="og:image" content="https://raw.githubusercontent.com/thalesmsousa10/brookes-presentes/main/og-image.png">
+  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/thalesmsousa10/brookes-presentes/main/og-image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Brookes Presentes — Galeria Oxford, Méier, Rio de Janeiro">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brookes Presentes — Galeria Oxford no Méier">
+  <meta name="twitter:description" content="Boutique de presentes criativos, Disney, linha religiosa e mimos afetivos. Nota 5.0 no Google com 179 avaliações.">
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/thalesmsousa10/brookes-presentes/main/og-image.png">
+
+  <!-- Favicon e Ícones da Marca -->
+  <link rel="icon" type="image/png" href="logo-brookes.png">
+  <link rel="apple-touch-icon" href="logo-brookes.png">
+  
   <!-- Google Fonts: Fraunces (Serifa calorosa e afetuosa) + Plus Jakarta Sans (Moderna e ultra nítida) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -247,7 +271,7 @@
       width: 100%;
     }
 
-    /* Coluna Central: Logotipo Puro da Brookes */
+    /* Coluna Central: Logotipo Oficial da Brookes */
     .nav-brand-center {
       display: flex;
       flex-direction: column;
@@ -258,7 +282,6 @@
 
     .brand-link {
       display: inline-flex;
-      flex-direction: column;
       align-items: center;
       text-decoration: none;
       padding: 0.2rem 0.5rem;
@@ -269,11 +292,38 @@
       opacity: 0.92;
     }
 
+    .brand-logo-combo {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-align: left;
+    }
+
+    .brand-logo-img {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 4px 14px rgba(230, 0, 126, 0.25);
+      border: 1.5px solid rgba(201, 147, 75, 0.4);
+      flex-shrink: 0;
+      transition: transform var(--transition-smooth);
+    }
+
+    .brand-link:hover .brand-logo-img {
+      transform: scale(1.05);
+    }
+
+    .brand-text-col {
+      display: flex;
+      flex-direction: column;
+    }
+
     .brand-monogram {
       font-family: var(--font-sans);
-      font-size: 0.6rem;
+      font-size: 0.5625rem;
       font-weight: 800;
-      letter-spacing: 0.28em;
+      letter-spacing: 0.24em;
       color: var(--color-amber-dark);
       text-transform: uppercase;
       margin-bottom: 1px;
@@ -281,7 +331,7 @@
 
     .brand-title {
       font-family: var(--font-serif);
-      font-size: 1.5rem;
+      font-size: 1.35rem;
       font-weight: 700;
       letter-spacing: -0.01em;
       color: var(--color-framboesa);
@@ -293,7 +343,7 @@
       font-family: var(--font-sans);
       font-size: 0.53125rem;
       font-weight: 700;
-      letter-spacing: 0.22em;
+      letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--color-cacao-muted);
       margin-top: 1px;
@@ -1491,12 +1541,17 @@
         <span></span>
       </button>
 
-      <!-- CENTRO: LOGOTIPO REFINADO BROOKES -->
+      <!-- CENTRO: LOGOTIPO OFICIAL DA BROOKES -->
       <div class="nav-brand-center">
         <a href="#inicio" class="brand-link" aria-label="Brookes Presentes - Página Inicial">
-          <span class="brand-monogram">✦ BROOKES ✦</span>
-          <span class="brand-title">Brookes Presentes</span>
-          <span class="brand-sub">BOUTIQUE DE AFETO · GALERIA OXFORD · MÉIER</span>
+          <div class="brand-logo-combo">
+            <img class="brand-logo-img" src="logo-brookes.png" alt="Logo Brookes Presentes">
+            <div class="brand-text-col">
+              <span class="brand-monogram">✦ BROOKES ✦</span>
+              <span class="brand-title">Brookes Presentes</span>
+              <span class="brand-sub">GALERIA OXFORD · LOJA 128 · MÉIER</span>
+            </div>
+          </div>
         </a>
       </div>
 
@@ -1520,10 +1575,12 @@
   <div class="mobile-drawer-overlay" id="mobileDrawerOverlay">
     <div class="mobile-drawer-panel">
       <div class="mobile-drawer-head">
-        <div style="display: flex; flex-direction: column;">
-          <span style="font-size: 0.6rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--color-amber-dark); font-weight: 800;">✦ BROOKES ✦</span>
-          <strong style="font-family: var(--font-serif); font-size: 1.35rem; color: var(--color-framboesa);">Brookes Presentes</strong>
-          <span style="font-size: 0.55rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-cacao-muted); font-weight: 700; margin-top: 2px;">Galeria Oxford · Méier</span>
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <img src="logo-brookes.png" alt="Logo Brookes Presentes" style="width: 40px; height: 40px; border-radius: 10px; border: 1px solid rgba(201, 147, 75, 0.4); object-fit: cover;">
+          <div style="display: flex; flex-direction: column;">
+            <strong style="font-family: var(--font-serif); font-size: 1.25rem; color: var(--color-framboesa); line-height: 1.1;">Brookes Presentes</strong>
+            <span style="font-size: 0.55rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--color-cacao-muted); font-weight: 700; margin-top: 2px;">Galeria Oxford · Méier</span>
+          </div>
         </div>
         <button class="drawer-close-btn" id="mobileMenuClose" aria-label="Fechar Menu">✕</button>
       </div>
